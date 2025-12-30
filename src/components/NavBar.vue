@@ -1,10 +1,10 @@
 <template>
   <header class="navbar-container">
     <div class="navbar-section">
-      <img src="@/assets/lisbeth_logo.jpg" alt="Logo" class="logo" />
       <h1>Lisbeth Bromberg</h1>
       <h2>Psykoterapeut</h2>
     </div>
+    <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
     <div class="navbar-section">
       <h2 class="page-selector" @click="() => handleClick('landing')">
         Forside
@@ -53,7 +53,7 @@ function handleClick(page) {
   height: 70px;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: var(--bg-color);
@@ -67,7 +67,7 @@ function handleClick(page) {
 }
 
 .logo {
-  height: 30px;
+  height: 40px;
   width: auto;
 }
 
@@ -88,7 +88,7 @@ h2 {
 .navbar-section {
   display: flex;
   gap: 1rem;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 
