@@ -2,19 +2,26 @@
   <div class="main-container">
     <NavBar></NavBar>
     <div class="main-content">
-      <LandingPage v-if="store.site === 'landing'"></LandingPage>
+      <Forside v-if="store.site === 'landing'"></Forside>
+      <About v-if="store.site === 'about'"></About>
+      <Kommune v-if="store.site === 'public'"></Kommune>
+      <Terapi v-if="store.site === 'therapy'"></Terapi>
+      <Priser v-if="store.site === 'price'"></Priser>
     </div>
     <div class="footer-container">
-      <hr>
       <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
-      <hr>
+
     </div>
   </div>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue'
-import LandingPage from './components/LandingPage.vue'
+import Forside from './components/Forside.vue'
+import About from './components/About.vue'
+import Kommune from './components/Kommune.vue'
+import Terapi from './components/Terapi.vue'
+import Priser from './components/Priser.vue'
 import { store } from "@/stores/store";
 
 </script>
@@ -38,13 +45,12 @@ img {
 }
 
 .main-content {
-  margin-top: 70px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: var(--gap-size);
 }
 
 .main-content h1 {
@@ -71,12 +77,5 @@ img {
   width: auto;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background-color: #E0E0E0;
-  width: 30%;
-  margin: 0;
-}
 
 </style>

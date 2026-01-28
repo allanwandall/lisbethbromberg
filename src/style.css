@@ -13,6 +13,13 @@
   --color-three: #776472;
   --color-four: #445552;
   --color--five: #294D4A;
+  --farve-light: #F1E7E4;
+  --farve-lighter: #F8F3F2;
+  --farve-logo: #85AC80;
+  --farve-dark: #7A6563;
+
+  --navbar-height: 90px;
+  --gap-size: 40px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,18 +58,21 @@ h3 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 999px;
+  border: 1px solid var(--farve-dark);
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  color: var(--farve-dark);
 }
 button:hover {
-  border-color: #646cff;
+  border: none;
+  background-color: var(--farve-dark);
+  color: white;
 }
 button:focus,
 button:focus-visible {
@@ -89,8 +99,19 @@ button:focus-visible {
 
 .text-container {
   white-space: pre-line;
-  background-color: #F1F5F2;
-  border-radius: 0.5rem;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.lighter {
+  background-color: var(--farve-lighter);
+}
+
+.light {
+  background-color: var(--farve-light);
 }
 
 p, li {
@@ -111,6 +132,10 @@ h2 {
   color: white;
   font-size: 1.3em;
 
+}
+
+section {
+  margin: 0 3rem;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,22 +1,23 @@
 <template>
   <header class="navbar-container" :class="{ scrolled: isScrolled }">
     <div class="navbar-section">
+      <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
       <h1>Lisbeth Bromberg</h1>
       <h2>Psykoterapeut</h2>
     </div>
-    <hr>
-    <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
-    <hr>
     <div class="navbar-section">
       <h2 class="page-selector" @click="() => handleClick('landing')">
         Forside
       </h2>
       <h2 class="page-selector" @click="() => handleClick('about')">Om mig</h2>
+      <h2 class="page-selector" @click="() => handleClick('therapy')">Terapi</h2>
+      <h2 class="page-selector" @click="() => handleClick('public')">Til kommuner</h2>
+      
+      <h2 class="page-selector" @click="() => handleClick('price')">
+        Priser
+      </h2>
       <h2 class="page-selector" @click="() => handleClick('contact')">
         Kontakt
-      </h2>
-      <h2 class="page-selector" @click="() => handleClick('price')">
-        Priser og praktik
       </h2>
     </div>
   </header>
@@ -52,7 +53,7 @@ function handleClick(page) {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
+  height: 90px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -70,7 +71,7 @@ function handleClick(page) {
 }
 
 .logo {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 
@@ -108,12 +109,5 @@ h2 {
 
 .scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-hr {
-  flex: 1;
-  border: none;
-  height: 1px;
-  background-color: #E0E0E0;
 }
 </style>
