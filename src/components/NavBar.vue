@@ -1,10 +1,12 @@
 <template>
-  <header class="navbar-container">
+  <header class="navbar-container" :class="{ scrolled: isScrolled }">
     <div class="navbar-section">
       <h1>Lisbeth Bromberg</h1>
       <h2>Psykoterapeut</h2>
     </div>
+    <hr>
     <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
+    <hr>
     <div class="navbar-section">
       <h2 class="page-selector" @click="() => handleClick('landing')">
         Forside
@@ -58,8 +60,9 @@ function handleClick(page) {
   padding: 1rem 2rem;
   background-color: var(--bg-color);
   font-family: 'Lora', serif;
+  gap: 2rem;
   z-index: 1000;
-  transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE10+ */
@@ -105,6 +108,12 @@ h2 {
 
 .scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: var(--bg-color-darker);
+}
+
+hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: #E0E0E0;
 }
 </style>

@@ -1,15 +1,20 @@
 <template>
   <div class="main-container">
-    <NavBar :class="{ scrolled: isScrolled }"></NavBar>
+    <NavBar></NavBar>
     <div class="main-content">
-      <h1>Denne side er under konstruktion</h1>
-      <h3>Kontakt Lisbeth på lisbethbromberg@protonmail.com eller 93 80 99 82</h3>
+      <LandingPage v-if="store.site === 'landing'"></LandingPage>
+    </div>
+    <div class="footer-container">
+      <hr>
+      <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
+      <hr>
     </div>
   </div>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue'
+import LandingPage from './components/LandingPage.vue'
 import { store } from "@/stores/store";
 
 </script>
@@ -37,8 +42,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  align-items: stretch;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .main-content h1 {
@@ -50,10 +56,27 @@ img {
   font-weight: lighter;
 }
 
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
 
-.big-content {
-  width: 100px;
-  height: 120vh;
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #E0E0E0;
+  width: 30%;
+  margin: 0;
 }
 
 </style>
