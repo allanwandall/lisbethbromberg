@@ -7,23 +7,23 @@
       <Kommune v-if="store.site === 'public'"></Kommune>
       <Terapi v-if="store.site === 'therapy'"></Terapi>
       <Priser v-if="store.site === 'price'"></Priser>
+      <Kontakt v-if="store.site === 'contact'"></Kontakt>
     </div>
     <div class="footer-container">
       <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
-
     </div>
   </div>
 </template>
 
 <script setup>
-import NavBar from './components/NavBar.vue'
-import Forside from './components/Forside.vue'
-import About from './components/About.vue'
-import Kommune from './components/Kommune.vue'
-import Terapi from './components/Terapi.vue'
-import Priser from './components/Priser.vue'
+import NavBar from "./components/NavBar.vue";
+import Forside from "./components/Forside.vue";
+import About from "./components/About.vue";
+import Kommune from "./components/Kommune.vue";
+import Terapi from "./components/Terapi.vue";
+import Priser from "./components/Priser.vue";
+import Kontakt from "./components/Kontakt.vue";
 import { store } from "@/stores/store";
-
 </script>
 
 <style scoped>
@@ -41,7 +41,9 @@ img {
   gap: 2rem;
   position: relative;
   background-color: var(--bg-color);
-  transition: box-shadow 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  transition:
+    box-shadow 0.6s ease-in-out,
+    background-color 0.6s ease-in-out;
 }
 
 .main-content {
@@ -55,7 +57,7 @@ img {
 
 .main-content h1 {
   font-size: 2rem;
-} 
+}
 
 .main-content h3 {
   font-size: 1rem;
@@ -77,5 +79,9 @@ img {
   width: auto;
 }
 
-
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+}
 </style>
