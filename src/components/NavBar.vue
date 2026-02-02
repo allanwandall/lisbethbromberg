@@ -1,6 +1,6 @@
 <template>
   <header class="navbar-container" :class="{ scrolled: isScrolled }">
-    <div class="navbar-section">
+    <div class="navbar-section" @click="() => handleClick('landing')">
       <img src="@/assets/lisbergbrombethlogo.png" alt="Logo" class="logo" />
       <div class="title-container">
         <h1>Lisbeth Bromberg</h1>
@@ -65,6 +65,10 @@ onUnmounted(() => {
 
 function handleClick(page) {
   store.site = page;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 </script>
 
@@ -154,7 +158,7 @@ h2 {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .title-container {
     flex-direction: column;
     justify-content: center;
@@ -203,6 +207,7 @@ h2 {
   .burger-context li {
     font-size: 2em;
     z-index: 2;
+    width: 100%;
   }
 
   .burger-context ul {

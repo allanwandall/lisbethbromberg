@@ -15,30 +15,35 @@
   </section>
   <section class="example-section">
     <div class="text-container lighter">
-      <div>
-        <p>Eksempler på temaer:</p>
-        <ul>
-          <li>
-            et ønske om at lære dig selv bedre at kende og blive fortrolig med
-            dine egne følelser og sansninger
-          </li>
-          <li>problemer med selvværd</li>
-          <li>et stort fokus på, hvad andre tænker om dig</li>
-          <li>mangel på kærlighed og tillid i nære relationer</li>
-          <li>været udsat for vold eller overgreb, og kæmper med senfølger</li>
-        </ul>
-      </div>
-      <div>
-        <p>Måske er du:</p>
-        <ul>
-          <li>pårørende til mennesker i sorg og krise</li>
-          <li>pårørende til mennesker med særlige behov</li>
-          <li>ensom, sorgfuld, stresset eller angst</li>
-        </ul>
-        <p>
-          Uanset hvad du føler udfordrende eller begrænsende i dit liv, er du
-          velkommen til at tage kontakt.
-        </p>
+      <h3>Eksempler på temaer</h3>
+      <div class="horizontal-flex">
+        <div>
+          <p>Måske har du:</p>
+          <ul>
+            <li>
+              et ønske om at lære dig selv bedre at kende og blive fortrolig med
+              dine egne følelser og sansninger
+            </li>
+            <li>problemer med selvværd</li>
+            <li>et stort fokus på, hvad andre tænker om dig</li>
+            <li>mangel på kærlighed og tillid i nære relationer</li>
+            <li>
+              været udsat for vold eller overgreb, og kæmper med senfølger
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p>Måske er du:</p>
+          <ul>
+            <li>pårørende til mennesker i sorg og krise</li>
+            <li>pårørende til mennesker med særlige behov</li>
+            <li>ensom, sorgfuld, stresset eller angst</li>
+          </ul>
+          <p>
+            Uanset hvad du føler udfordrende eller begrænsende i dit liv, er du
+            velkommen til at tage kontakt.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -136,7 +141,15 @@ ul {
   display: none;
 }
 
-@media (max-width: 768px) {
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--gap-size);
+}
+
+@media (max-width: 1200px) {
   .text-container {
     padding: 2rem;
   }

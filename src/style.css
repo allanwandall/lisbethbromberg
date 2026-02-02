@@ -51,11 +51,14 @@ h1 {
 
 h2 {
   margin: 0;
+  font-weight: 600;
+  font-size: 1.5em;
 }
 
 h3 {
   margin: 0;
   padding: 0;
+  font-weight: 600;
 }
 
 button {
@@ -74,13 +77,9 @@ button {
   color: var(--farve-dark);
 }
 button:hover {
-  border: none;
+  border: 1px solid white;
   background-color: var(--farve-dark);
   color: white;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 #app {
@@ -104,7 +103,7 @@ button:focus-visible {
 .text-container {
   white-space: pre-line;
   border-radius: 10px;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 img {
@@ -119,14 +118,6 @@ img {
 
 .light {
   background-color: var(--farve-light);
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.8em;
 }
 
 .image-placeholder {
@@ -147,7 +138,7 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   section {
     flex-direction: column;
   }

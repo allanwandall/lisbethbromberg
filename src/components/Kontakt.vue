@@ -175,7 +175,7 @@ button {
   align-self: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .card-stage {
     width: calc(100vw - (2 * var(--gap-size)));
     height: calc((100vw - (2 * var(--gap-size))) * 0.57);

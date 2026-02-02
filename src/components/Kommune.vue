@@ -1,4 +1,5 @@
 <template>
+  <h2 class="offer-header">Jeg tilbyder følgende ydelser:</h2>
   <section>
     <div class="text-container light">
       <h2>Familiebehandling (§30 og §32)</h2>
@@ -25,6 +26,7 @@
       <p>{{ boernText }}</p>
     </div>
   </section>
+  <button @click="goToContact">KONTAKT</button>
 </template>
 
 <script setup>
@@ -32,6 +34,15 @@ import familieText from "@/content/familiebehandling.txt?raw";
 import samvaerText from "@/content/samvaer.txt?raw";
 import stoetteText from "@/content/stoetteperson.txt?raw";
 import boernText from "@/content/boern_kommune.txt?raw";
+import { store } from "@/stores/store";
+
+function goToContact() {
+  store.site = "contact";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 </script>
 
 <style scoped>
@@ -47,9 +58,24 @@ section {
   gap: var(--gap-size);
 }
 
-@media (max-width: 768px) {
+.offer-header {
+  margin-left: calc(var(--gap-size) + 5rem);
+  margin-top: 2rem;
+  font-size: 1.5em;
+}
+
+button {
+  align-self: center;
+  width: 200px;
+}
+
+@media (max-width: 1200px) {
   .text-container {
     padding: 2rem;
+  }
+
+  .offer-header {
+    margin-left: calc(var(--gap-size) + 2rem);
   }
 }
 </style>

@@ -1,9 +1,8 @@
 <template>
   <section class="header-mobile">
-    <div class="text-container light">
-      <h1>
-        Psykoterapi & familiebehandling<br />Nærvær, tryghed og forandring
-      </h1>
+    <div class="text-container header light">
+      <h1>Psykoterapi & familiebehandling</h1>
+      <h2>Nærvær, tryghed og forandring</h2>
     </div>
   </section>
   <section class="landing-section">
@@ -14,10 +13,9 @@
         class="intro-image"
       />
     </div>
-    <div class="text-container light">
-      <h1>
-        Psykoterapi & familiebehandling<br />Nærvær, tryghed og forandring
-      </h1>
+    <div class="text-container header light">
+      <h1>Psykoterapi & familiebehandling</h1>
+      <h2>Nærvær, tryghed og forandring</h2>
     </div>
   </section>
   <section class="why-section">
@@ -34,6 +32,7 @@
       <ul>
         <li>Individuel terapi til voksne</li>
         <li>Parterapi</li>
+        <li>Familieterapi</li>
         <li>Terapi til børn og unge</li>
       </ul>
       Til kommuner:
@@ -70,6 +69,10 @@ import { store } from "@/stores/store";
 
 function goToContact() {
   store.site = "contact";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 </script>
 
@@ -148,11 +151,27 @@ button:hover {
   flex: 3;
 }
 
+.offerings-section .text-container h2 {
+  margin-bottom: 0.4em;
+}
+
 .header-mobile {
   display: none;
 }
 
-@media (max-width: 768px) {
+.header h1 {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-size: 1.8em;
+}
+
+.header h2 {
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+@media (max-width: 1200px) {
   section {
     display: flex;
     flex-direction: column;

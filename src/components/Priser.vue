@@ -1,29 +1,30 @@
 <template>
   <section class="price-section">
     <div class="text-container light">
-      <h2>Priser</h2>
+      <h2 class="price-header">Priser</h2>
       <div class="price-elements">
         <div class="price-element">
           <p>1-1 terapi voksne / 60 minutter</p>
-          <hr />
           <p>700 kr.</p>
         </div>
         <div class="price-element">
           <p>Parterapi / 90 minutter</p>
-          <hr />
           <p>1.050 kr.</p>
         </div>
         <div class="price-element">
           <p>Terapi til børn og unge / 60 minutter</p>
-          <hr />
           <p>700 kr.</p>
         </div>
         <div class="price-element">
           <p>Familieterapi / 90 minutter</p>
-          <hr />
           <p>1.050 kr.</p>
         </div>
       </div>
+      <p>
+        Er du studerende mellem 18 og 25 år, tilbyder jeg 1-1 terapi af 60
+        minutters varighed for 550 kr. pr. session.
+      </p>
+      <p>Betaling sker efter hver terapisession via MobilePay.</p>
       <p>
         Afbud skal ske senest kl. 19.00 dagen før vores aftale.<br />Ved senere
         afbud eller udeblivelse opkræves det fulde honorar.
@@ -51,13 +52,17 @@ section {
   gap: var(--gap-size);
 }
 
+.price-header {
+  margin-bottom: -20px;
+}
+
 .price-section .text-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 40px;
+  gap: 30px;
 }
 
 .price-element {
@@ -69,11 +74,12 @@ section {
 }
 
 .price-elements {
-  margin: 0 10vh;
+  margin: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  max-width: 600px;
   gap: 20px;
 }
 
@@ -88,7 +94,7 @@ hr {
   background-color: var(--farve-dark);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .text-container {
     padding: 2rem;
   }
@@ -100,6 +106,7 @@ hr {
 
   .price-elements {
     margin: 0;
+    max-width: 300px;
   }
 }
 </style>
