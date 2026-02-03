@@ -74,7 +74,7 @@
 <script setup>
 import terapiVoksneText from "@/content/terapi_voksne.txt?raw";
 import parterapiText from "@/content/parterapi.txt?raw";
-import boernText from "@/content/boern_kommune.txt?raw";
+import boernText from "@/content/boern_kommune.txt?raw"; //ingenting
 </script>
 
 <style scoped>
