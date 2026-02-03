@@ -37,7 +37,9 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+//hej2
+</script>
 
 <style scoped>
 .text-container {
