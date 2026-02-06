@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #213547;
   background-color: #fff6f3;
   --bg-color: #ffffff;
   --bg-color-darker: #e8f0ea;
@@ -104,6 +104,7 @@ button:hover {
   white-space: pre-line;
   border-radius: 10px;
   font-size: 1.3em;
+  overflow-wrap: break-word;
 }
 
 img {
@@ -131,12 +132,7 @@ section {
   margin: 0 var(--gap-size);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
+
 
 @media (max-width: 1200px) {
   section {
@@ -159,5 +155,9 @@ section {
 
   h2 {
     font-size: 1.3em;
+  }
+
+  ul {
+    padding-inline-start: 30px;
   }
 }

@@ -197,5 +197,9 @@ button:hover {
     display: flex;
     font-size: 0.8em;
   }
+
+  .contact-section .text-container {
+    padding: 2rem;
+  }
 }
 </style>

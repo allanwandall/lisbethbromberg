@@ -126,6 +126,7 @@ h2 {
 .title-container {
   position: relative;
   display: inline-block;
+  white-space: nowrap;
   padding-right: 40px;
 }
 
@@ -165,6 +166,7 @@ h2 {
     align-items: flex-start;
     gap: 0;
     font-size: 0.7em;
+    padding: 0;
   }
 
   .page-selectors {
@@ -219,6 +221,10 @@ h2 {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 15px;
+  }
+
+  .navbar-container {
+    gap: 0;
   }
 }
 </style>

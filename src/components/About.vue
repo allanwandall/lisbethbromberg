@@ -69,7 +69,7 @@
             <li>Traumebehandling</li>
             <li>Seksualitet</li>
             <li>Senfølger efter seksuelle overgreb i barndommen</li>
-            <li>Gennemgribende personlighedsforstyrrelser/ADHD/Autisme</li>
+            <li>Gennemgribende personligheds<wbr>forstyrrelser/<wbr>ADHD/<wbr>Autisme</li>
             <li>Samskabelse</li>
           </ul>
         </div>
@@ -85,6 +85,7 @@ import omMigText from "@/content/om_mig.txt?raw";
 <style scoped>
 .text-container {
   padding: 5rem;
+  overflow: hidden;
 }
 
 img {
