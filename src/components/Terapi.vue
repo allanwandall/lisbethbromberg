@@ -111,21 +111,15 @@ ul {
   flex: 1;
 }
 
-.example-section .text-container div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.example-section .horizontal-flex {
+  gap: var(--gap-size);
 }
 
 .example-section .text-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 200px;
+  flex: 1;
 }
+
+
 
 .stole-img {
   height: auto;
@@ -169,6 +163,10 @@ ul {
 
   .stole-img-container {
     width: auto;
+  }
+
+  .horizontal-flex {
+    flex-direction: column;
   }
 }
 </style>

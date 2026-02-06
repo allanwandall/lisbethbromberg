@@ -121,6 +121,11 @@ ul {
   font-size: 1.3em;
 }
 
+.landing-section .text-container h1 {
+  text-align: center;
+
+}
+
 .why-section .text-container {
   flex: 1;
 }
