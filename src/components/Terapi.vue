@@ -47,8 +47,12 @@
       </div>
     </div>
   </section>
-
-  <section>
+  <section class="stole-img-container">
+    <div class="image-container">
+      <img src="@/assets/stole3.jpg" alt="Strand placeholder" />
+    </div>
+  </section>
+  <section class="couple-container">
     <div class="text-container light">
       <h2>Parterapi</h2>
       <p>{{ parterapiText }}</p>
@@ -58,15 +62,6 @@
     <div class="text-container lighter">
       <h2>Terapi til børn og unge</h2>
       <p>{{ boernText }}</p>
-    </div>
-  </section>
-  <section class="stole-img-container">
-    <div class="image-container">
-      <img
-        src="@/assets/stole1.jpg"
-        alt="Billede af 3 stole og et bord i Lisbeths terapilokale"
-        class="stole-img"
-      />
     </div>
   </section>
 </template>
@@ -119,8 +114,6 @@ ul {
   flex: 1;
 }
 
-
-
 .stole-img {
   height: auto;
   display: block;
@@ -141,6 +134,28 @@ ul {
   justify-content: space-between;
   align-items: stretch;
   gap: var(--gap-size);
+}
+
+.couple-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-size);
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.couple-container .text-container {
+  flex: 3;
+}
+
+.couple-container .image-container {
+  flex: 2;
+  height: 100%;
+  overflow: hidden;
+}
+
+.couple-container .image-container img {
+  object-position: 60% 50%;
 }
 
 @media (max-width: 1200px) {

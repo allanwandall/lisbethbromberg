@@ -1,19 +1,15 @@
 <template>
   <section class="libber-mobil">
     <div class="image-container">
-      <img src="@/assets/libber2.jpg" alt="Billede af Lisbeth" />
+      <img src="@/assets/libber4.jpg" alt="Billede af Lisbeth" />
     </div>
   </section>
   <section class="about-section">
     <div class="text-container light">
-      <div class="libber-container">
-        <img
-          src="@/assets/libber2.jpg"
-          alt="Billede af Lisbeth"
-          class="libber-billede"
-        />
-      </div>
       <p>{{ omMigText }}</p>
+    </div>
+    <div class="image-container">
+      <img src="@/assets/libber4.jpg" alt="Billede af Lisbeth" />
     </div>
   </section>
   <section class="education-section">
@@ -69,7 +65,9 @@
             <li>Traumebehandling</li>
             <li>Seksualitet</li>
             <li>Senfølger efter seksuelle overgreb i barndommen</li>
-            <li>Gennemgribende personligheds<wbr>forstyrrelser/<wbr>ADHD/<wbr>Autisme</li>
+            <li>
+              Gennemgribende personligheds<wbr />forstyrrelser/<wbr />ADHD/<wbr />Autisme
+            </li>
             <li>Samskabelse</li>
           </ul>
         </div>
@@ -111,11 +109,11 @@ ul {
 }
 
 .about-section .text-container {
-  flex: 2;
+  flex: 3;
 }
 
 .about-section .image-container {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -124,7 +122,9 @@ ul {
 }
 
 .about-section .image-container img {
-  flex: 1;
+  flex: 2;
+  object-fit: cover;
+  object-position: 33% 50%;
 }
 
 .education-section .text-container {
@@ -189,6 +189,10 @@ h3 {
 
 @media (max-width: 1200px) {
   .libber-billede {
+    display: none;
+  }
+
+  .about-section .image-container {
     display: none;
   }
 
